@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="calculator-container">
+        <h1>Calaculator: </h1>
+
+        <div class="basic-operations">
+            <label for="input1">Enter 1st number: </label>
+            <input type="Number" id="input1" placeholder="enter 1st number: "> <br><br>
+            <label for="input2">Enter 2nd number: </label>
+            <input type="Number" id="input2" placeholder="enter 2nd number: "> <br><br>
+
+            <div class="button-group">
+                <button onclick="Addition()">click to add</button>
+                <button onclick="Subtraction()">click to subtract</button>
+                <button onclick="Multiplication()">click to multiply</button>
+                <button onclick="Division()">click to divide</button>
+                <button onclick="Exponentiation()">click for exponentiation</button>
+            </div>
+
+            <p id="cal"></p>
+        </div>
+
+        <br><h3>This section is for sqrt || sqr || Double </h3>
+        <div class="advanced-operations">
+            <label for="input3">Enter no. for sqrt || sqr || Double: </label>
+            <input type="number" id="input3"> <br><br>
+
+            <div class="button-group">
+                <button onclick="SquareRoot()"> click for squareRoot</button>
+                <button onclick="Square()"> click to find square</button>
+                <button onclick="Double()"> click to find double</button>
+            </div>
+
+            <p id="cal2"></p>
+        </div>
+    </div>
+
+    <script>
+        function Addition(){
+           let a = document.getElementById("input1").value;
+           let b =  document.getElementById("input2").value;
+           let c = Number(a) + Number(b);
+        document.getElementById("cal").textContent="the sum is: " + c;
+        }
+        function Subtraction(){
+           let a = document.getElementById("input1").value;
+           let b =  document.getElementById("input2").value;
+           let c = Number(a) - Number(b);
+        document.getElementById("cal").textContent="the substraction is: " + c;
+        }
+        function Multiplication(){
+           let a = document.getElementById("input1").value;
+           let b =  document.getElementById("input2").value;
+           let c = Number(a) * Number(b);
+        document.getElementById("cal").textContent="the product is: " + c;
+        }
+        function Division(){
+           let a = document.getElementById("input1").value;
+           let b =  document.getElementById("input2").value;
+           let c = Number(a) / Number(b);
+        document.getElementById("cal").textContent="the quiotent is: " + c;
+        }
+        function Exponentiation(){
+           let a = document.getElementById("input1").value;
+           let b = document.getElementById("input2").value;
+           let c = Math.pow(a, b);
+        document.getElementById("cal").textContent="the exponentiation is: " + c;
+        }
+        function SquareRoot(){
+           let a = document.getElementById("input3").value;
+           let b = Math.sqrt(a);
+        document.getElementById("cal2").textContent="the exponentiation is: " + b;
+        }
+        function Square(){
+           let a = document.getElementById("input3").value;
+           let b = Math.pow(a, 2);
+        document.getElementById("cal2").textContent="the exponentiation is: " + b;
+        }
+        function Double(){
+           let a = document.getElementById("input3").value;
+           let b = Number(a) * 2;
+        document.getElementById("cal2").textContent="the double is: " + b;
+        }
+
+    </script>
+</body>
+
+</html>
